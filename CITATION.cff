@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "FKCD Integrated: Fast κ-path Community Detection"
+authors:
+  - family-names: "Ferrara"
+    given-names: "Emilio"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+version: "0.1.0"
+doi: ""
+date-released: "2025-07-01"
+url: "https://github.com/YOUR_USERNAME/fkcd"
+keywords:
+  - "community detection"
+  - "network analysis"
+  - "graph algorithms"
+"

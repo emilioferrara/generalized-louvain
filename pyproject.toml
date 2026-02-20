@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fkcd-integrated"
+version = "0.1.0"
+description = "Fast κ-path Community Detection (FKCD) integrated implementation"
+authors = [{name = "Emilio Ferrara", email = "emilio@example.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["community-detection", "networks", "graph", "fkcd", "louvain"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
