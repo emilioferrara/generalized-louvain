@@ -1,4 +1,4 @@
-# FKCD Integrated  
+# Generalized Louvain Method for Community Detection in Large Networks
 **Fast κ-path Community Detection (FKCD)**  
 Scalable and research-grade implementation
 
@@ -136,18 +136,6 @@ Behavior:
 
 ---
 
-## Batch Size (Exact Mode)
-
-```bash
---batch-size 512
-```
-
-Controls memory/speed tradeoff during exact proximity computation.
-
-Larger = faster but higher memory usage.
-
----
-
 ## Community Detection
 
 By default:
@@ -163,75 +151,74 @@ To prefer Louvain:
 
 ---
 
-## Output
-
-```bash
---output-partition output.json
-```
-
-Produces:
-
-```json
-{
-  "method": "...",
-  "modularity": 0.42,
-  "partition": { "node": community_id }
-}
-```
-
----
-
-## Example Runs
-
-### Fast Large-Scale Mode
-
-```bash
-python fkcd_integrated.py   --input graph.edgelist   --proximity-mode neigh   --workers 8   --rho 1000
-```
-
----
-
-### Exact Academic Mode
-
-```bash
-python fkcd_integrated.py   --input graph.edgelist   --proximity-mode exact   --batch-size 512   --rho 500
-```
-
----
-
-## Performance Notes
-
-| Graph Size | Recommended Mode |
-|------------|------------------|
-| < 10K nodes | `exact` |
-| 10K–100K | `neigh` |
-| 100K–1M+ | `neigh` + numba + Louvain |
-
-Exact mode complexity is approximately:
-
-O(|E| · |V|)
-
-Neighbor-restricted mode reduces this substantially in sparse networks.
-
----
-
 # Academic References
 
 ## Required Citation
 
 De Meo, P., Ferrara, E., Fiumara, G., & Provetti, A. (2011).  
-Generalized Louvain method for community detection in large networks.  
-11th International Conference on Intelligent Systems Design and Applications (ISDA), IEEE, pp. 88–93.
+*Generalized Louvain method for community detection in large networks.*  
+Proceedings of the 11th International Conference on Intelligent Systems Design and Applications (ISDA), IEEE, pp. 88–93.
 
-## Related Work
+### BibTeX
+
+```bibtex
+@inproceedings{demeo2011generalized,
+  title        = {Generalized Louvain method for community detection in large networks},
+  author       = {De Meo, Pasquale and Ferrara, Emilio and Fiumara, Giacomo and Provetti, Alessandro},
+  booktitle    = {2011 11th International Conference on Intelligent Systems Design and Applications},
+  pages        = {88--93},
+  year         = {2011},
+  organization = {IEEE},
+  doi          = {10.1109/ISDA.2011.6121636}
+}
+```
+
+---
+
+## Related Work — Edge Centrality
 
 De Meo, P., Ferrara, E., Fiumara, G., & Ricciardello, A. (2012).  
-A novel measure of edge centrality in social networks.  
+*A novel measure of edge centrality in social networks.*  
 Knowledge-Based Systems, 30, 136–150.
 
+### BibTeX
+
+```bibtex
+@article{demeo2012novel,
+  title   = {A novel measure of edge centrality in social networks},
+  author  = {De Meo, Pasquale and Ferrara, Emilio and Fiumara, Giacomo and Ricciardello, Antonio},
+  journal = {Knowledge-Based Systems},
+  volume  = {30},
+  pages   = {136--150},
+  year    = {2012},
+  doi     = {10.1016/j.knosys.2012.01.007},
+  publisher = {Elsevier}
+}
+```
+
+---
+
+## Related Work — Mixing Local and Global Information
+
 De Meo, P., Ferrara, E., Fiumara, G., & Provetti, A. (2014).  
-Mixing local and global information for community detection in large networks.  
+*Mixing local and global information for community detection in large networks.*  
 Journal of Computer and System Sciences, 80(1), 72–87.
+
+### BibTeX
+
+```bibtex
+@article{demeo2014mixing,
+  title   = {Mixing local and global information for community detection in large networks},
+  author  = {De Meo, Pasquale and Ferrara, Emilio and Fiumara, Giacomo and Provetti, Alessandro},
+  journal = {Journal of Computer and System Sciences},
+  volume  = {80},
+  number  = {1},
+  pages   = {72--87},
+  year    = {2014},
+  doi     = {10.1016/j.jcss.2013.07.012},
+  publisher = {Elsevier}
+}
+```
 
 ---
 
