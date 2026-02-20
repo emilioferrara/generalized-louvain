@@ -198,6 +198,25 @@ Knowledge-Based Systems, 30, 136–150.
 
 ---
 
+## 📄 Papers
+
+Full-text PDFs of the original research contributions are included in this repository:
+
+- **ISDA 2011**  
+  *Generalized Louvain Method for Community Detection in Large Networks*  
+  [`paper/ISDA2011_Generalized_Louvain.pdf`](paper/ISDA2011_Generalized_Louvain.pdf)
+
+- **Knowledge-Based Systems 2012**  
+  *A Novel Measure of Edge Centrality in Social Networks*  
+  [`paper/KBS2012_Kappa_Path_Edge_Centrality.pdf`](paper/KBS2012_Kappa_Path_Edge_Centrality.pdf)
+
+- **Journal of Computer and System Sciences 2014**  
+  *Mixing Local and Global Information for Community Detection in Large Networks*  
+  [`paper/JCSS2014_Mixing_Local_Global.pdf`](paper/JCSS2014_Mixing_Local_Global.pdf)
+
+
+---
+
 ## Related Work — Mixing Local and Global Information
 
 De Meo, P., Ferrara, E., Fiumara, G., & Provetti, A. (2014).  
